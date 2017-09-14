@@ -66,7 +66,7 @@ public class Student {
     }
 
     public double calcAverage() {
-        Course c = new Course();
+        Course c = null;
         double sum = 0;
         for (int i = 0; i < tedadDorus; i++) {
             sum = sum + c.getNomreDorus(i);
