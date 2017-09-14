@@ -9,7 +9,7 @@ public class Student {
     private String family;
     private String fatherName;
     private String field;
-    private Course c;
+    
     private int tedadDorus;
     private double average;
 
@@ -66,9 +66,10 @@ public class Student {
     }
 
     public double calcAverage() {
+        Course c = new Course();
         double sum = 0;
         for (int i = 0; i < tedadDorus; i++) {
-            sum = sum + c.getNomreDorus().get(i);
+            sum = sum + c.getNomreDorus(i);
         }
         average = sum / (double)tedadDorus;
         return average;

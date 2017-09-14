@@ -43,6 +43,7 @@ public class reportCardClone {
     public static void readDorus(Course c,Student s) {
         Scanner sc = new Scanner(System.in);
         int n = s.getTedadDorus();
+        c=new Course();
         for (int i = 0; i < n; i++) {
             System.out.println("name dars?");
             c.addDars(sc.next());
