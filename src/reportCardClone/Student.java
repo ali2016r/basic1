@@ -11,8 +11,6 @@ public class Student {
     private String field;
     private Course c;
     private int tedadDorus;
-   // private LinkedList<String> dorus;
-    //private LinkedList<Double> nomreDorus;
     private double average;
 
     public void setName(String n) {
@@ -55,14 +53,6 @@ public class Student {
         this.tedadDorus = tedadDorus;
     }
 
-//    public void addDars(String str) {
-//        dorus.add(str);
-//    }
-
-//    public void addNomre(double nomre) {
-//        nomreDorus.add(nomre);
-//    }
-
     public void setStudentNumber(int sn) {
         if (sn == 0) {
             System.out.println("Student number is zero, try another student number");
@@ -71,28 +61,10 @@ public class Student {
         studentNumber = sn;
     }
 
-    /**
-     * This function is getter of student number
-     *
-     * @return student number of corresponding student
-     */
     public int getStudentNumber() {
         return studentNumber;
     }
 
-    /**
-     * This is Constructor of Student class
-     */
-//    public Student() {
-//        dorus = new LinkedList<>();
-//        nomreDorus = new LinkedList<>();
-//    }
-
-    /**
-     * This function is getter of student number
-     *
-     * @return student number of corresponding student
-     */
     public double calcAverage() {
         double sum = 0;
         for (int i = 0; i < tedadDorus; i++) {
