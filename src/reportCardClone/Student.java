@@ -9,9 +9,10 @@ public class Student {
     private String family;
     private String fatherName;
     private String field;
+    private Course c;
     private int tedadDorus;
-    private LinkedList<String> dorus;
-    private LinkedList<Double> nomreDorus;
+   // private LinkedList<String> dorus;
+    //private LinkedList<Double> nomreDorus;
     private double average;
 
     public void setName(String n) {
@@ -54,13 +55,13 @@ public class Student {
         this.tedadDorus = tedadDorus;
     }
 
-    public void addDars(String str) {
-        dorus.add(str);
-    }
+//    public void addDars(String str) {
+//        dorus.add(str);
+//    }
 
-    public void addNomre(double nomre) {
-        nomreDorus.add(nomre);
-    }
+//    public void addNomre(double nomre) {
+//        nomreDorus.add(nomre);
+//    }
 
     public void setStudentNumber(int sn) {
         if (sn == 0) {
@@ -82,10 +83,10 @@ public class Student {
     /**
      * This is Constructor of Student class
      */
-    public Student() {
-        dorus = new LinkedList<>();
-        nomreDorus = new LinkedList<>();
-    }
+//    public Student() {
+//        dorus = new LinkedList<>();
+//        nomreDorus = new LinkedList<>();
+//    }
 
     /**
      * This function is getter of student number
@@ -95,9 +96,9 @@ public class Student {
     public double calcAverage() {
         double sum = 0;
         for (int i = 0; i < tedadDorus; i++) {
-            sum = sum + nomreDorus.get(i);
+            sum = sum + c.getNomreDorus().get(i);
         }
-        average = sum / (double) tedadDorus;
+        average = sum / (double)tedadDorus;
         return average;
     }
 }

@@ -1,11 +1,14 @@
 package reportCardClone;
 
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class reportCardClone {
 
     public static void main(String[] args) {
+        
         Student[] students = readStudents();
+        //LinkedList<course> course2 =new LinkedList<>();
         System.out.println("شماره دانشجویی" + "\t" + "نام دانشجو" + "\t" + "نام خانوادگی" + "\t" + "نام پدر" + "\t" + "رشته تحصیلی" + "\t" + "معدل");
         for (Student student : students) {
             System.out.println(student.getStudentNumber() + "\t" + student.getName() + "\t" + student.getFamily() + "\t" + student.getfatherName() + "\t" + student.getField() + "\t" + student.calcAverage());
@@ -14,6 +17,8 @@ public class reportCardClone {
 
     public static Student[] readStudents() {
         Scanner sc = new Scanner(System.in);
+        Course course2 = null ;
+        //LinkedList<course> course2 =new LinkedList<>();
         System.out.println("ثبت دانشجو:");
         System.out.println("تعداد دانشجویان؟");
         int tedadStd = sc.nextInt();
@@ -32,19 +37,19 @@ public class reportCardClone {
             students[i].setField(sc.next());
             System.out.println("تعداد دروس:" + (i + 1));
             students[i].setTedadDorus(sc.nextInt());
-            readDorus(students[i]);
+            readDorus(course2,students[i]);
         }
         return students;
     }
 
-    public static void readDorus(Student s) {
+    public static void readDorus(Course c,Student s) {
         Scanner sc = new Scanner(System.in);
         int n = s.getTedadDorus();
         for (int i = 0; i < n; i++) {
             System.out.println("name dars?");
-            s.addDars(sc.next());
+            c.addDars(sc.next());
             System.out.println("nomre?");
-            s.addNomre(sc.nextDouble());
+            c.addNomre(sc.nextDouble());
         }
     }
 }
